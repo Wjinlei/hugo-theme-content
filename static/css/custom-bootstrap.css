@@ -1,0 +1,29 @@
+* {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+}
+
+.footer {
+  font-size: 13px;
+}
+
+.nav {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.nav-tabs .nav-link {
+  font-size: 14px;
+  padding: 0.3rem 1rem;
+  margin-left: -1px;
+  margin-bottom: 0px;
+  border: 0px;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+}
+
+#content {
+  margin: 0px 40px 40px 40px;
+}

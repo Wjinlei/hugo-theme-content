@@ -1,0 +1,7 @@
+<p class="footer text-center color-999">标签列表</p>
+{{ range .Site.Taxonomies.tags }}
+  <a class="footer" href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+{{ end }}
+
+<p class="footer text-center color-999">&copy; {{ now.Format "2006"}} <a href="https://github.com/Wjinlei">Jerry Wang</a></p>
+<p class="footer text-center color-999">由 <a href="https://gohugo.io">Hugo</a> 强力驱动</p>

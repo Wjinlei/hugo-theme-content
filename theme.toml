@@ -1,0 +1,24 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Content"
+license = "MIT"
+licenselink = "https://github.com/Wjinlei/hugo-theme-content/blob/master/LICENSE"
+description = "It is reproduced at https://www.bwsl.wang"
+homepage = "https://wjinlei.github.io/"
+
+tags = [
+  "blog",
+  "content",
+  "simple",
+  "clean",
+  "personal"
+]
+
+features = []
+
+min_version = "0.41.0"
+
+[author]
+  name = "Wjinlei"
+  homepage = "https://github.com/Wjinlei"

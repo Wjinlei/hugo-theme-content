@@ -1,0 +1,13 @@
+<span class="font-size-14 color-999">本文共 {{ .WordCount  }} 字，阅读约 {{ .ReadingTime  }} 分钟</span>
+{{ $dateTime := .PublishDate.Format "2006-01-02" }}
+{{ $dateFormat := .Site.Params.dateFormat | default "2006-01-02 15:04:05" }}
+<div class="color-999 font-size-14">
+<time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time>
+{{ with .Params.tags }}
+<i class="fa-solid fa-tags"></i>
+{{ range . }}
+{{ $href := print (absURL "tags/") (urlize .) }}
+<a href="{{ $href }}">{{ . }}</a>
+{{ end }}
+{{ end }}
+</div>

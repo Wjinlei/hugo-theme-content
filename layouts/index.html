@@ -1,0 +1,68 @@
+{{ define "main" }}
+<div class="text-center"><b class="title font-size-20">置顶文章</b></div>
+{{ range .Site.RegularPages }}
+  {{ if isset .Params "top" }}
+  <b class="font-size-18"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></b>
+  {{ partial "metadata.html" . }}
+  <div style="padding-top: 10px;">{{ .Summary }}</div>
+  <a style="font-size: 13px" class="title" href="{{ .RelPermalink }}">继续阅读>></a>
+  {{ end }}
+{{ end}}
+
+<hr class="color-bbb" />
+
+<div style="margin-bottom: 10px;"><b class="title font-size-20">最近更新</b></div>
+{{  range first 1 .Site.RegularPages }}
+  <b class="font-size-18"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></b>
+  {{ partial "metadata.html" . }}
+  <div style="padding-top: 10px;">{{ .Content | safeHTML }}</div>
+{{ end }}
+
+<hr class="color-bbb" />
+<div class="row">
+{{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+{{ if eq $taxonomyname "categories" }}
+{{ range $key, $value := $taxonomy }}
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg col-xl col-xxl">
+    <b class="font-size-20">分类 <a href="{{ "/categories/" | relLangURL}}{{ $key | urlize }}/">{{ $key }}</a> 下的文章</b>
+    {{ range first 10 $value.Pages }}
+    <div class="font-size-14"><a href="{{ .Permalink}}"> {{ .LinkTitle }} </a> <time datetime="2006-01-02" class="color-999">{{ .PublishDate.Format "2006-01-02" }}</time></div>
+    {{ end }}
+    <p style="text-align: right;"><a style="font-size: 13px;" href="{{ "/categories/" | relLangURL}}{{ $key | urlize }}/">Read More>></a></p>
+  </div>
+{{ end }}
+{{ end }}
+{{ end }}
+</div>
+
+<hr class="color-bbb" />
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
+    {{ range .Paginator.Pages.ByPublishDate.Reverse }}
+    <b class="font-size-18"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></b>
+    {{ partial "metadata.html" . }}
+    <div style="padding-top: 10px;">{{ .Summary }}</div>
+    <a style="font-size: 13px" class="title" href="{{ .RelPermalink }}">继续阅读>></a>
+    <hr class="color-bbb" />
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+  </div>
+
+  <div class="col-xs-0 col-sm-0 col-md-0 col-lg-3 col-xl-3 col-xxl-3">
+    <div><b class="font-size-18">手气不错</b></div>
+    <div class="font-size-14" id="random-post-list"></div>
+
+    <br/>
+
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+    {{ if eq $taxonomyname "categories" }}
+    <div><b class="font-size-18">分类</b></div>
+    {{ range $key, $value := $taxonomy }}
+    <div><a class="font-size-14" href="{{ "/categories/" | relLangURL}}{{ $key | urlize }}/">{{ $key }}</a></div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}
+

@@ -1,0 +1,30 @@
+{{ define "main" }}
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9">
+    {{ range .Paginator.Pages.ByPublishDate.Reverse }}
+      <b class="font-size-18"><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></b>
+      {{ partial "metadata.html" . }}
+      <div style="padding-top: 10px;">{{ .Summary }}</div>
+      <a style="font-size: 13px" class="title" href="{{ .RelPermalink }}">继续阅读>></a>
+      <hr class="color-bbb" />
+    {{ end }}
+  <div class="flex-h-center">{{ template "_internal/pagination.html" . }}</div>
+  </div>
+
+  <div class="col-xs-0 col-sm-0 col-md-0 col-lg-3 col-xl-3 col-xxl-3">
+    <div><b class="font-size-18">手气不错</b></div>
+    <div class="font-size-14" id="random-post-list"></div>
+
+    <br/>
+
+    {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+    {{ if eq $taxonomyname "categories" }}
+    <div><b class="font-size-18">分类</b></div>
+    {{ range $key, $value := $taxonomy }}
+    <div><a class="font-size-14" href="{{ "/categories/" | relLangURL}}{{ $key | urlize }}/">{{ $key }}</a></div>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,120 @@
+/* 定义字体 */
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url("/fonts/JetBrainsMono-Regular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "UbuntuMono";
+  src: url("/fonts/UbuntuMono-R.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NotoSerifSC";
+  src: url("/fonts/NotoSerifSC-Regular.otf");
+  font-display: swap;
+}
+
+body {
+  font-family: "JetBrainsMono", "UbuntuMono", "NotoSerifSC", "Consolas",
+    "Ubuntu Mono", "Source Code Pro", "Fira Code", "Helvetica Neue", Helvetica,
+    "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial,
+    sans-serif;
+  color: #444444;
+  background-color: #fcfcfc;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 2;
+}
+
+code span {
+  font-family: "Consolas", "Ubuntu Mono", "Source Code Pro", "Fira Code",
+    "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+
+pre {
+  padding: 10px;
+  box-shadow: 5px 5px 5px rgb(68 68 68 / 60%);
+  border-radius: 7px;
+  border: 2px solid #282a36;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #3354aa;
+}
+
+table {
+  font-size: 14px;
+  border-width: 1px;
+  border-color: #dfe2e5;
+  border-collapse: collapse;
+}
+table th {
+  padding: 6px 20px 6px 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dfe2e5;
+  background-color: #f6f8fa;
+}
+table td {
+  padding: 4px 20px 4px 20px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #dfe2e5;
+  background-color: #ffffff;
+}
+
+blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.font-size-20 {
+  font-size: 20px;
+}
+
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.flex-v-center {
+  display: flex;
+  align-items: center;
+}
+
+.flex-h-center {
+  display: flex;
+  justify-content: center;
+}
+
+.color-warning {
+  color: #e6a23c;
+}
+
+.color-bbb {
+  color: #bbb;
+}
+
+.color-999 {
+  color: #999;
+}
