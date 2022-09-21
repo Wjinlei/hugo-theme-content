@@ -39,37 +39,37 @@ page_view_conter = true
 [menu]
   [[menu.left]]
   name = "首页"
-  pre = "fa-solid fa-house" // https://fontawesome.com/ icon class
+  pre = "fa-solid fa-house" # 这里使用的是 https://fontawesome.com 免费版的Icon Class
   url = "/"
   weight = 1
 
   [[menu.left]]
   name = "文章"
-  pre = "fa-solid fa-pen-nib"  // https://fontawesome.com/ icon class
+  pre = "fa-solid fa-pen-nib" # 这里使用的是 https://fontawesome.com 免费版的Icon Class
   url = "/posts/"
   weight = 2
 
   [[menu.right]]
   name = "我的QQ"
-  pre = "fa-brands fa-qq"  // https://fontawesome.com/ icon class
+  pre = "fa-brands fa-qq" # 这里使用的是 https://fontawesome.com 免费版的Icon Class
   url = "#"
   weight = 1
 
   [[menu.right]]
   name = "我的微信"
-  pre = "fa-brands fa-weixin"  // https://fontawesome.com/ icon class
+  pre = "fa-brands fa-weixin" # 这里使用的是 https://fontawesome.com 免费版的Icon Class
   url = "#"
   weight = 2
 
   [[menu.right]]
   name = "我的Github"
-  pre = "fa-brands fa-github"  // https://fontawesome.com/ icon class
+  pre = "fa-brands fa-github" # 这里使用的是 https://fontawesome.com 免费版的Icon Class
   url = "https://github.com/Wjinlei"
   weight = 3
 
   [[menu.right]]
   name = "我的邮箱"
-  pre = "fa-solid fa-envelope"  // https://fontawesome.com/ icon class
+  pre = "fa-solid fa-envelope" # 这里使用的是 https://fontawesome.com 免费版的Icon Class
   url = "mailto:your email url"
   weight = 4
 
