@@ -1,19 +1,19 @@
 /* 定义字体 */
 @font-face {
   font-family: "JetBrainsMono";
-  src: url("../fonts/JetBrainsMono-Regular.woff") format("woff");
+  src: url("../webfonts/JetBrainsMono-Regular.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "UbuntuMono";
-  src: url("../fonts/UbuntuMono-R.ttf");
+  src: url("../webfonts/UbuntuMono-R.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "NotoSerifSC";
-  src: url("../fonts/NotoSerifSC-Regular.otf");
+  src: url("../webfonts/NotoSerifSC-Regular.otf");
   font-display: swap;
 }
 
